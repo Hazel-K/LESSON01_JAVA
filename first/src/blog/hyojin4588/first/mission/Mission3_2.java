@@ -68,7 +68,7 @@ public class Mission3_2 {
 			System.out.println("다시 입력하시려면 Y를 입력하세요. : ");
 			reStart = scan.next();
 		}
-		while ("Y".equals(reStart) || "y".equals(reStart));
+		while ("Y".equals(reStart) || "y".equals(reStart) || "ㅛ".equals(reStart));
 		scan.close();
 	}
 }

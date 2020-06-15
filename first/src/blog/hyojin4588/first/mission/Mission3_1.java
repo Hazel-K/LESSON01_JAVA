@@ -13,42 +13,32 @@ public class Mission3_1 {
 			"평균입니다."
 			"평균 초과입니다."
 		*/
-		int manAvg = 160, femAvg = 150;
+		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("성별을 입력해주세요(남/여) : ");
 		String gender = scan.next();
 		System.out.println("키를 입력해주세요 : ");
 		int height = scan.nextInt();
 		scan.close();
-		if (("남".equals(gender) == true))
-		{
-			if(height > manAvg)
-			{
+		
+		if ("남".equals(gender) || "여".equals(gender)) {
+			
+			int standHeight = 150; // 변수를 초기화하는 것을 잊지 말기
+			
+			if ("남".equals(gender)) {
+				standHeight = 160;
+			}
+			
+			if(height > standHeight) {
 				System.out.println("평균 초과입니다.");
-			}
-			else if (height < manAvg)
-			{
-				System.out.println("평균 이하입니다.");
-			}
-			else
-			{
+			} else if (height < standHeight) {
+				System.out.println("평균 미만입니다.");
+			} else {
 				System.out.println("평균입니다.");
 			}
-		}
-		if (("여".equals(gender) == true))
-		{
-			if(height > femAvg)
-			{
-				System.out.println("평균 초과입니다.");
-			}
-			else if (height < femAvg)
-			{
-				System.out.println("평균 이하입니다.");
-			}
-			else
-			{
-				System.out.println("평균입니다.");
-			}
+			
+		} else {
+			System.out.println("성별을 잘못 입력하셨습니다. 다시 입력해주세요.");
 		}
 	}
 }
