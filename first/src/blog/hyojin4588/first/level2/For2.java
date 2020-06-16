@@ -1,4 +1,4 @@
-package blog.hyojin4588.first.repeat;
+package blog.hyojin4588.first.level2;
 
 public class For2 {
 
