@@ -10,7 +10,10 @@ public class ArrayOrder3_1 {
 		for (int i = arr.length - 1; i > 0; i--) { // 8 ~ 1 까지 반복
 
 			for (int j = 0; j < i; j++) { // 0 ~ (i - 1) 까지 반복
-
+				
+				// System.out.print(i + " " + j);
+				// System.out.println();
+				
 				if (arr[j + 1] < arr[j]) {
 
 					int iTemp = arr[j + 1];
@@ -18,15 +21,15 @@ public class ArrayOrder3_1 {
 					arr[j] = iTemp;
 
 				}
-
+				
 			}
 
 		}
-
+		
 		for (int i : arr) {
 			System.out.print(i + " ");
 		}
-
+		
 	}
 
 }
