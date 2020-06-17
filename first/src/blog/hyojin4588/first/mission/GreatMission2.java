@@ -15,8 +15,8 @@ public class GreatMission2 {
 
 		// 메뉴 출력
 		System.out.println("-메뉴-");
-		for (int i = 1; i <= arrMenu.length; i++) {
-			System.out.print(i + ". " + arrMenu[i - 1] + " (" + arrPrice[i - 1] + "원)\n");
+		for (int i = 0; i < arrMenu.length; i++) {
+			System.out.printf("%d. %s (%,d원)\n", (i + 1), arrMenu[i], arrPrice[i]);
 		}
 		// 메뉴 출력 끝
 
@@ -42,15 +42,16 @@ public class GreatMission2 {
 			// 탈출 조건문 끝
 
 			// 입력 메뉴 및 가격 표시문
-			System.out.println(arrMenu[iInput - 1] + " (" + arrPrice[iInput - 1] + "원)");
-			iSum += arrPrice[iInput - 1]; // 입력받은 가격을 변수에 합산
+			int iIdx = iInput - 1; // 인덱스 조절용 변수
+			System.out.printf("%s (%,d원)\n", arrMenu[iIdx], arrPrice[iIdx]);
+			iSum += arrPrice[iIdx]; // 입력받은 가격을 변수에 합산
 			// 입력 메뉴 및 가격 표시문 끝
 
 		}
 		// 반복문 끝
 
 		// 결과문 출력
-		System.out.println("\n결제 금액은 " + iSum + "원 입니다.");
+		System.out.printf("\n결제 금액은 %,d원 입니다.", iSum);
 		// 결과문 출력 끝
 
 		scan.close(); // 스캔 기능 종료
