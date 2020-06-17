@@ -16,7 +16,7 @@ public class GreatMission2 {
 		// 메뉴 출력
 		System.out.println("-메뉴-");
 		for (int i = 1; i <= arrMenu.length; i++) {
-			System.out.print((i) + ". " + arrMenu[i - 1] + " (" + arrPrice[i - 1] + "원)\n");
+			System.out.print(i + ". " + arrMenu[i - 1] + " (" + arrPrice[i - 1] + "원)\n");
 		}
 		// 메뉴 출력 끝
 
