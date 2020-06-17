@@ -10,7 +10,7 @@ public class GreatMission2 {
 		int[] arrPrice = { 500, 600, 700, 800, 400, 400 }; // 가격 입력
 
 		int iInput = 0; // 받아올 입력값을 저장하는 변수
-		int iSum = 0; // 받아올 가격을 저장하는 변수
+		int iSum = 0; // 받아온 가격을 저장하는 변수
 		Scanner scan = new Scanner(System.in); // 스캔 기능 변수 설정
 
 		// 메뉴 출력
