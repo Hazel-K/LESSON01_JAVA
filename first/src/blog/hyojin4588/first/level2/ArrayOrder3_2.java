@@ -18,7 +18,7 @@ public class ArrayOrder3_2 {
 					System.out.print(k != 0 ? ", " : "");
 					System.out.print(k == j || k == j + 1 ? "[" + arr[k] + "]" : arr[k]);
 					
-				}				
+				}
 				
 				System.out.print("\t[] : 현재 선택된 비교 대상, 교체 여부 : [");
 				System.out.print((arr[j + 1] < arr[j]) ? "교체]" : "잔류]");

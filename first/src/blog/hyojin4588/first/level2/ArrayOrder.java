@@ -29,7 +29,7 @@ public class ArrayOrder {
 				System.out.println();
 			}
 			System.out.println();
-
+			
 		}
 		/*
 		 * for (int k = 0; k < arr.length; k++) { System.out.print(arr[k] + " "); } //
