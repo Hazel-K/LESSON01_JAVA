@@ -32,6 +32,13 @@ public class GM_Practice1_1 {
 		int classCount = 0; // 각 항목 개수 누적용 변수
 		// 배열 및 변수 끝
 		
+		// 클래스에 점수가 들어가지 않았을 시 오류 구문 출력
+		if (scoreArr.length != classArr.length) {
+			System.out.println("과목과 점수 입력이 올바르지 않습니다. 배열을 다시 확인해주세요.");
+			return; // 오류 구문 출력한 후 이후 코드를 실행시키지 않음
+		}
+		// 클래스에 점수가 들어가지 않았을 시 오류 구문 출력 끝
+		
 		// 과목별 합계 및 평균 산출 (전체 포함)
 		for (int i = 0; i < classArr.length; i++) {
 			for (int j = 0; j < scoreArr[i].length; j++) {
