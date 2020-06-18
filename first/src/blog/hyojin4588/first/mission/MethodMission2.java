@@ -18,10 +18,9 @@ public class MethodMission2 {
 	public static void printStarReverse (int iNum) {
 		
 		for (int i = 1; i <= iNum; i++) {
-			for (int j = iNum; j > i; j--) { // (int j = 0; j < iNum - i; j++) 와 동일
-				System.out.print(" ");
-			}
-			printStar(i);
+			printString(" ", iNum - i);
+			printString("*", i);
+			System.out.println();
 		}
 		
 	}
@@ -51,4 +50,12 @@ public class MethodMission2 {
 		
 	}
 
+	public static void printString (String iStr, int iNum) {
+		
+		for (int i = 0; i < iNum; i++) {
+			System.out.print(iStr);
+		}
+		
+	}
+	
 }
