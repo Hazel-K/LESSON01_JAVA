@@ -45,8 +45,8 @@ public class GM_Practice1_1 {
 				classSum[i] += scoreArr[i][j]; // 각 과목의 합이 누적합으로서 배열에 삽입되므로 classArr 길이만큼의 공간이 필요하다.
 				classCount++; // 전체 평균 산출 시 필요한 요소이므로 2중 for문이 반복 수행될 때마다 개수를 누적시킨다.
 			}
-			classTotal += classSum[i];
-			classAvg[i] = (float)classSum[i] / scoreArr[i].length;// 2중 for문 안에서 실행 시 3번씩 값이 정해지므로 넣을 필요가 없음
+			classTotal += classSum[i]; // 각 과목의 누적합을 또 classTotal에 누적합시켜서 전체 합계를 만든다.
+			classAvg[i] = (float)classSum[i] / scoreArr[i].length;// 2중 for문 안에서 실행 시 3번씩 값이 정해지므로 굳이 2중 for문 안에 넣을 필요가 없음
 		}
 		// 과목별 합계 및 평균 산출 끝 (전체 포함)
 		
