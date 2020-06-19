@@ -2,7 +2,7 @@ package blog.hyojin4588.first.level2;
 
 import java.util.Arrays;
 
-public class ArrCopy {
+public class ArrayCopy {
 	
 	public static void main (String[] args) {
 		
