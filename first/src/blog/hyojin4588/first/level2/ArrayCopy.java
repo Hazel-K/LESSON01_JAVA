@@ -17,8 +17,7 @@ public class ArrayCopy {
 			arr2[i] = arr[i];
 		}
 		System.out.println("arr2 : " + Arrays.toString(arr2));
-		
-		
+	
 	}
 	
 
