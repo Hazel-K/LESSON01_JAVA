@@ -23,6 +23,10 @@ public class Car {
 		// 도 가능하다. 이 경우 위의 super(); 는 쓰면 안 됨.
 	}
 	
+	public Car(String name) {
+		this(name, "검정색", 3000); // 생성자들 중 3개 인자를 받아 오는 생성자를 자동으로 불러온다.
+	}
+	
 	public Car(String name, String color, int cc) {
 		super(); // super(); 부모 생성자, 나의 직속 부모를 뜻한다.
 		/* 
@@ -37,7 +41,7 @@ public class Car {
 		this.color = color;
 		this.cc = cc;
 		// super 혹은 this(); 해당 object의 생성자를 불러온다는 것을 의미
-		// super 혹은 this.elementName 해당 object에 해당 element의 값을 입력한다.  
+		// super 혹은 this.elementName 해당 object에 해당 element의 값을 입력한다.
 	}
 	// 컴파일러가 생각하는 기본 생성자 끝
 	
