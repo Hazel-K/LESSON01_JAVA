@@ -8,7 +8,7 @@ public class BoardVO {
 	// Member Field
 	
 	// Constructor
-	public BoardVO() {} // 기본생성자
+	public BoardVO() {} // 기본생성자, 하나도 없을 때는 컴파일러가 자동으로 삽입
 	
 	public BoardVO(String title, String content, int writeID) {
 		super();

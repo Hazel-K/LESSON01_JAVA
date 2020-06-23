@@ -22,9 +22,9 @@ public class Initializer {
 	public static void runGame() {
 		openMent();
 		answerIs();
-		excute();
+		answerSet();
 		while (true) {
-			 for (int i : answerArr) {System.out.print(i + " ");}
+			// for (int i : answerArr) {System.out.print(i + " ");}
 			myAnswer();
 			compareStart();
 			compareEnd();
@@ -48,8 +48,8 @@ public class Initializer {
 		answer = InputNum.answerIs();
 	}
 
-	private static void excute() {
-		answerArr = AGenerator.excute(answer);
+	private static void answerSet() {
+		answerArr = AGenerator.answerSet(answer);
 	}
 
 	private static void myAnswer() {

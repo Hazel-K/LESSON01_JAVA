@@ -11,7 +11,7 @@ public class AGenerator {
 	// Constructor
 	
 	// Entity Method
-	public static int[] excute(int iNum) {
+	public static int[] answerSet(int iNum) {
 		int[] iArr2 = new int[Initializer.answer];
 		for (int i = 0; i < iNum; i++) {
 			iArr2[i] = (int)(Math.random() * 9 + 1);
