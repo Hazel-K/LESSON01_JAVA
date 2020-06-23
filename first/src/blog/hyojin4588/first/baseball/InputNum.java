@@ -4,6 +4,8 @@ public class InputNum {
 	// 자릿수를 입력받는 클래스입니다. 스캔 기능을 이용하여 값을 변수에 저장합니다.
 	
 	// Member Field
+	static int startNum = 1; // 입력받는 숫자의 범위
+	static int endNum = 9; // 입력받는 숫자의 범위
 	// Member Field
 		
 	// Constructor
@@ -23,6 +25,15 @@ public class InputNum {
 		for(int i = 0; i < Initializer.answer; i++) {
 			System.out.println((i + 1) + "번째 숫자를 입력해주세요.(1 ~ 9의 숫자) : ");
 			iArr1[i] = Initializer.scan.nextInt();
+			while(true) {
+				if ((iArr1[i] >= startNum) && (iArr1[i] <= endNum)) {
+					break;
+				} else {
+					Notice.missMent();
+					i--;
+					break;
+				}
+			}
 		}
 		return iArr1;
 	}

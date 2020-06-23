@@ -37,6 +37,11 @@ public class Notice {
 			System.out.printf("\n\n축하드립니다! %d회 만에 성공하셨습니다.", Initializer.tryCnt);
 		}
 	}
+	
+	// 숫자 오입력시 멘트
+	public static void missMent() {
+		System.out.printf("잘못 입력하셨습니다. %d에서 %d 사이의 숫자를 입력해주세요.\n", InputNum.startNum, InputNum.endNum);
+	}
 	// Entity Method
 
 }

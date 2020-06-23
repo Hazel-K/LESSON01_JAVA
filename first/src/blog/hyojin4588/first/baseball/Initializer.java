@@ -24,7 +24,7 @@ public class Initializer {
 		answerIs();
 		answerSet();
 		while (true) {
-			// for (int i : answerArr) {System.out.print(i + " ");}
+			// for (int i : answerArr) {System.out.print(i + " ");} // 정답 확인 구문
 			myAnswer();
 			compareStart();
 			compareEnd();
