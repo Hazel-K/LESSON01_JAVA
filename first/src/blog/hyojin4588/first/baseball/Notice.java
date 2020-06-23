@@ -31,6 +31,7 @@ public class Notice {
 		}
 	}
 
+	// 종료 멘트
 	public static void congratMent() {
 		if (Initializer.strike == Initializer.answer) {
 			System.out.printf("\n\n축하드립니다! %d회 만에 성공하셨습니다.", Initializer.tryCnt);
