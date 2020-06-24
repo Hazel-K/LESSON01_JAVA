@@ -10,11 +10,18 @@ public class MyListTest {
 		list.add(25);
 		list.add(2,100);
 		
-		System.out.println(list.remove(2));
+		// System.out.println(list.remove(2));
 		
+		// MyArrays.print(list);
+		
+		String str = MyArrays.toString(list);
+		System.out.println(str);
+		
+		/*
 		for(int i = 0; i <list.size();i++) {
 			System.out.println(list.get(i));
 		}
+		*/
 	}
 
 }
@@ -40,13 +47,14 @@ class MyList {
 	void add(int i, int j) {
 		int[] temp = new int[arr.length + 1];
 		for(int k = 0; k < arr.length; k++) {
-			
+			/*
 			if(k >= i) {
 				temp[k+1] = arr[k];
 			} else {
 			temp[k] = arr[k];
 			}
-		
+			*/
+			temp[k >= i ? k + 1 : k] = arr[k];
 		}
 		temp[i] = j;
 		arr = temp;
@@ -67,7 +75,7 @@ class MyList {
 		int[] temp = new int[arr.length - 1];
 		int delNum = arr[i];
 		for (int j = 0; j < temp.length; j++) {
-			temp[j] = j < i ? arr[j] : arr[j+1];
+			temp[j] = j < i ? arr[j] : arr[j + 1];
 		}
 		arr = temp;
 		return delNum;
@@ -82,4 +90,31 @@ class MyList {
 	}
 	// Entity Method
 
+}
+
+class MyArrays {
+	
+	static void print(MyList i) {
+		System.out.print("[");
+		for (int j = 0; j < i.size(); j++) {
+			System.out.print(j > 0 ? ", " + i.get(j) : i.get(j));
+		}
+		System.out.print("]");
+	}
+	
+	static String toString(MyList i) {
+		/*
+		String temp = "[";
+		for (int j = 0; j < i.size(); j++) {
+			temp += j > 0 ? ", " + i.get(j) : i.get(j);
+		}
+		return temp + "]";
+		*/
+		String temp = ""; // String은 char형의 배열이라는 점에 주의
+		for (int j = 0; j < i.size(); j++) {
+			temp += j > 0 ? ", " + i.get(j) : i.get(j);
+		}
+		return String.format("[%s]", temp);
+	}
+	
 }
