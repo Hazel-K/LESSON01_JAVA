@@ -22,20 +22,17 @@ public class MyBall {
 	public void setNumbers() {
 		for(int i = 0; i < myArr.length; i++) {
 			System.out.printf("%d번째 숫자를 입력해주세요(1 ~ 9) : ", i + 1);
-			/* // 문자열 입력시 오류 구문
+			// 문자열 입력시 오류 구문
 			String strI = scan.nextLine();
 			try {
 				myArr[i] = Integer.parseInt(strI);
 			} catch (Exception e) {
-				myArr[i] = 0;
-			}
-			if (myArr[i] == 0) {
 				System.out.print("숫자만 입력하여야 합니다. 다시 ");
 				i--;
 				continue;
 			}
-			*/ // 문자열 입력시 오류 구문
-			myArr[i] = scan.nextInt();
+			// 문자열 입력시 오류 구문
+			// myArr[i] = scan.nextInt();
 			if (myArr[i] < 1 || myArr[i] > 9) {
 				System.out.print("입력 범위를 벗어나셨습니다. 다시 ");
 				i--;

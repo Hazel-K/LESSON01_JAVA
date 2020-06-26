@@ -20,7 +20,9 @@ public class Game {
 		
 		MyBall myBall = new MyBall(gameCnt);
 		
+		do {
 		myBall.setNumbers();
+		} while (Checker.check(gameCnt, ball, myBall));
 	}
 	// Entity Method
 
