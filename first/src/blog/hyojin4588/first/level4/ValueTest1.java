@@ -11,7 +11,7 @@ public class ValueTest1 {
 		// 자기 걸 오버라이딩해서 쓰고 있음.
 		
 		ValueExam1 val1 = new ValueExam1(1);
-		ValueExam1 val2 = new ValueExam1(2);
+		ValueExam1 val2 = new ValueExam1(1);
 		
 		System.out.println("1: " + (val1 == val2));
 		System.out.println("2: " + val1.equals(val2));

@@ -11,10 +11,10 @@ public class ValueExam1 {
 	public int getVal() {
 		return val;
 	}
-/*
-	@Override
+
 	public boolean equals(Object i) {
-		return Integer.toString(val) == i; 
+		ValueExam1 j = (ValueExam1)i;
+		return j.val == val;
 	}
-*/
+
 }
