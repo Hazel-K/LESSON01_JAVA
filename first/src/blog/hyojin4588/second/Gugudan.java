@@ -4,14 +4,16 @@ public class Gugudan {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		gugudan(2, 5);
+		// gugudan(2, 5);
+		Gugudan a = new Gugudan();
+		a.gugudan(2, 5);
 	}
 
-	public static void gugudan(int a, int b) {
-		for (; a <= b; a++) {
+	public void gugudan(int startNum, int endNum) {
+		for (; startNum <= endNum; startNum++) {
 			for (int i = 1; i < 10; i++) {
-				if ((a * i) % 2 == 0) {
-					System.out.printf("%d * %d = %d\n", a, i, a * i);
+				if ((startNum * i) % 2 == 0) {
+					System.out.printf("%d * %d = %d\n", startNum, i, startNum * i);
 				}
 			}
 			System.out.println();
