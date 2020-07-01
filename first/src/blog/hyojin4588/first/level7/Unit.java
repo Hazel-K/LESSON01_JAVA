@@ -25,6 +25,10 @@ public class Unit {
 		return current_hp;
 	}
 	
+	public void setCurrent_hp(int hp) {
+		this.current_hp = current_hp + hp;
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("이름 : %s, 체력 : %,d/%,d", NAME, current_hp, MAX_HP);

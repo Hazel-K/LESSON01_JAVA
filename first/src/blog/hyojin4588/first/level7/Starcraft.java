@@ -10,6 +10,20 @@ public class Starcraft {
 		m2.attack(m1);
 		m1.attack(m1);
 		System.out.println(m1);
+		
+		Firebat f1 = new Firebat();
+		f1.attack(m1);
+		f1.attack(m1);
+		f1.attack(m1);
+		System.out.println(m1);
+		
+		// System.out.println(f1 instanceof Treatable);
+		
+		Medic md1 = new Medic();
+		md1.heal(m1);
+		md1.heal(f1);
+		System.out.println(m1);
+		System.out.println(f1);
 	}
 
 }

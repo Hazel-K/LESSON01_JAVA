@@ -1,6 +1,6 @@
 package blog.hyojin4588.first.level7;
 
-public class Marine extends Unit implements AttackUnit {
+public class Marine extends Unit implements AttackUnit, Treatable {
 	
 	private int damage;
 	
@@ -12,7 +12,6 @@ public class Marine extends Unit implements AttackUnit {
 	@Override
 	public void attack(Unit u) {
 		if (this == u) {
-			
 		} else {
 		System.out.println("따다다다");
 		u.getDamage(damage);
