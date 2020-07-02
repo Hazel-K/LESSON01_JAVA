@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class B_Deck {
 
-	ArrayList<Integer> spade = new ArrayList();
-	ArrayList<Integer> clover = new ArrayList();
-	ArrayList<Integer> diamond = new ArrayList();
-	ArrayList<Integer> heart = new ArrayList();
+	ArrayList<Integer> spade = new ArrayList<Integer>();
+	ArrayList<Integer> clover = new ArrayList<Integer>();
+	ArrayList<Integer> diamond = new ArrayList<Integer>();
+	ArrayList<Integer> heart = new ArrayList<Integer>();
+	
 
 	public void initCard() {
 		for (int i = 0; i < 4; i++) {
@@ -28,6 +29,47 @@ public class B_Deck {
 				}
 			}
 		}
+	}
+	
+	public String[] drawCard() {
+		ArrayList<Integer> tempDeck = new ArrayList<Integer>();
+		String[] strI = new String[2];
+		int iRand = (int)(Math.random() * 4);
+		switch (iRand) {
+		case 0:
+			tempDeck = spade;
+			strI[0] = "♠";
+			int jRand = (int)(Math.random() * tempDeck.size());
+			strI[1] = String.format("%d", tempDeck.get(jRand));
+			tempDeck.remove(tempDeck.get(jRand));
+			spade = tempDeck;
+			break;
+		case 1:
+			tempDeck = clover;
+			strI[0] = "♣";
+			jRand = (int)(Math.random() * tempDeck.size());
+			strI[1] = String.format("%d", tempDeck.get(jRand));
+			tempDeck.remove(tempDeck.get(jRand));
+			clover = tempDeck;
+			break;
+		case 2:
+			tempDeck = diamond;
+			strI[0] = "◆";
+			jRand = (int)(Math.random() * tempDeck.size());
+			strI[1] = String.format("%d", tempDeck.get(jRand));
+			tempDeck.remove(tempDeck.get(jRand));
+			diamond = tempDeck;
+			break;
+		case 3:
+			tempDeck = heart;
+			strI[0] = "♥";
+			jRand = (int)(Math.random() * tempDeck.size());
+			strI[1] = String.format("%d", tempDeck.get(jRand));
+			tempDeck.remove(tempDeck.get(jRand));
+			heart = tempDeck;
+			break;
+		}
+		return strI;
 	}
 
 }
