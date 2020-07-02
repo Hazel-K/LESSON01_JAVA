@@ -19,12 +19,26 @@ public class Gugudan {
 		// Utils.sortASC(arr);
 		// Utils.sortDESC(arr);
 		// Utils.printArr(arr);
-		
-		int[] rArr = Utils.createRandomArr(1, 9, 5);
-		Utils.printArr(rArr);
-		// 1 ~ 9 랜덤한 값을 5칸 가지는 정수형 배열을 리턴하시오
-	}
 
+		// int[] rArr = Utils.createRandomArrNoDuplication(5, 15, 12);
+		// Utils.printArr(rArr);
+		// 1 ~ 9 랜덤한 값을 5칸 가지는 정수형 배열을 리턴하시오
+		
+		String star = makeStarTrinangle(5);
+		System.out.println(star);
+	}
+	
+	public static String makeStarTrinangle(int a) {
+		String temp = "";
+		for(int i = 1; i <= a; i++) {
+			for(int j = 0; j < i; j++) {
+			temp += "*";
+			}
+			temp += "\n";
+		}
+		return temp;
+	}
+	
 	public void gugudan(int startNum, int endNum) {
 		for (; startNum <= endNum; startNum++) {
 			for (int i = 1; i < 10; i++) {
@@ -81,7 +95,7 @@ class Utils {
 		}
 		return args;
 	}
-	
+
 	public static int[] sortDESC(int[] args) {
 		int iNum1 = 0;
 		int iNum2 = 0;
@@ -100,11 +114,15 @@ class Utils {
 	}
 
 	public static void printArr(int[] args) {
-		for (int i = 0; i < args.length; i++) {
-			if (i == args.length - 1) {
-				System.out.println(args[i]);
-			} else {
-				System.out.print(args[i] + ", ");
+		if (args == null) {
+			System.out.println("arr is null");
+		} else {
+			for (int i = 0; i < args.length; i++) {
+				if (i == args.length - 1) {
+					System.out.println(args[i]);
+				} else {
+					System.out.print(args[i] + ", ");
+				}
 			}
 		}
 	}
@@ -112,8 +130,26 @@ class Utils {
 	public static int[] createRandomArr(int a, int b, int c) {
 		int[] temp = new int[c];
 		for (int i = 0; i < c; i++) {
-			temp[i] = (int)(Math.random() * b + a);
+			temp[i] = (int) (Math.random() * (b - a + 1) + a);
 		}
 		return temp;
 	}
+
+	public static int[] createRandomArrNoDuplication(int a, int b, int c) {
+		if ((b - a) < c - 1) {
+			return null;
+		}
+		int[] temp = new int[c];
+		for (int i = 0; i < c; i++) {
+			temp[i] = (int) (Math.random() * (b - a + 1) + a);
+			for (int j = 0; j < i; j++) {
+				if (temp[i] == temp[j]) {
+					i--;
+					break;
+				}
+			}
+		}
+		return temp;
+	}
+
 }

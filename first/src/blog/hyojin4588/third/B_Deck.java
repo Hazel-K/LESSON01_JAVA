@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class B_Deck {
 
-	ArrayList<Integer> spade = new ArrayList<Integer>();
-	ArrayList<Integer> clover = new ArrayList<Integer>();
-	ArrayList<Integer> diamond = new ArrayList<Integer>();
-	ArrayList<Integer> heart = new ArrayList<Integer>();
+	static ArrayList<Integer> spade = new ArrayList<Integer>();
+	static ArrayList<Integer> clover = new ArrayList<Integer>();
+	static ArrayList<Integer> diamond = new ArrayList<Integer>();
+	static ArrayList<Integer> heart = new ArrayList<Integer>();
 	
 
-	public void initCard() {
+	public static void initCard() {
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 13; j++) {
 				switch (i) {
@@ -31,7 +31,7 @@ public class B_Deck {
 		}
 	}
 	
-	public String[] drawCard() {
+	public static String[] drawCard() {
 		ArrayList<Integer> tempDeck = new ArrayList<Integer>();
 		String[] strI = new String[2];
 		int iRand = (int)(Math.random() * 4);
