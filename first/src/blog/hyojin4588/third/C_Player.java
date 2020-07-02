@@ -11,5 +11,11 @@ public class C_Player extends B_Deck {
 		String strTemp2 = strTemp1[0] + " " + strTemp1[1];
 		myCards.add(strTemp2);
 	}
+	
+	public static void showMyCards() {
+		for (int i = 0; i < myCards.size(); i++) {
+			System.out.print(myCards.get(i));
+		}
+	}
 
 }

@@ -12,4 +12,10 @@ public class C_Dealer extends B_Deck {
 		dealerCards.add(strTemp2);
 	}
 
+	public static void showDealerCards() {
+		for (int i = 0; i < dealerCards.size(); i++) {
+			System.out.print(dealerCards.get(i));
+		}
+	}
+
 }
