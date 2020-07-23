@@ -8,7 +8,6 @@ public class B_Deck {
 	static ArrayList<Integer> clover = new ArrayList<Integer>();
 	static ArrayList<Integer> diamond = new ArrayList<Integer>();
 	static ArrayList<Integer> heart = new ArrayList<Integer>();
-	
 
 	public static void initCard() {
 		for (int i = 0; i < 4; i++) {
@@ -30,7 +29,7 @@ public class B_Deck {
 			}
 		}
 	}
-	
+
 	public static String[] drawCard() {
 		ArrayList<Integer> tempDeck = new ArrayList<Integer>();
 		String[] strI = new String[2];

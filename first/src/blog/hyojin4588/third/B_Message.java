@@ -2,7 +2,7 @@ package blog.hyojin4588.third;
 
 public class B_Message {
 	
-	public void printMsg(int i) {
+	public static void printMsg(int i) {
 		switch(i) {
 		case 0:
 			System.out.println("블랙잭을 시작합니다.");
